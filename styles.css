@@ -29,5 +29,5 @@ body {
   
 }
 .square:hover{
-  transition-duration: 0ms;
+  transition-duration: 50ms;
 }

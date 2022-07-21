@@ -1,5 +1,5 @@
 const board =document.querySelector('#board')
-const squaresNumber = 300
+const squaresNumber = 402
 const colors =['red','yellow','purple',
 'green','orange','pink', 'blue','greenyellow']
 
@@ -19,8 +19,9 @@ for(let i=0; i< squaresNumber; i++)
 
 const setColor = (element)=>{
     let color = randomColor()
+    let color2= randomColor2()
     element.style.backgroundColor = color;
-    element.style.boxShadow =`0 0 2px ${color}, 0 0 10px ${color}`;
+    element.style.boxShadow =`0 0 2px ${color2 }, 0 0 10px ${color2}`;
 
 }
 const removeColor = (element)=>{
@@ -28,6 +29,11 @@ const removeColor = (element)=>{
     element.style.boxShadow =`0 0 2px #000`;
 }
 const randomColor = ()=>{
+    const index = Math.floor(Math.random()* colors.length)
+    
+    return colors[index]
+}
+const randomColor2 = ()=>{
     const index = Math.floor(Math.random()* colors.length)
     
     return colors[index]
